@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form method="POST" onsubmit="functionValidation(); return false;">
+        <fieldset>
+            <legend><h1>Registration Form</h1></legend>
+                <section>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" placeholder="Въведете потребителско име"
+                        title="Задължително от 3 до 10 знака.">
+                    <label class="error" id="errorUsername"></label>
+                </section>
+                <section>
+                    <label for="name">First name:</label>
+                    <input type="text" id="name" placeholder="Въведете първо име"
+                        title="Задължително до 50 знака.">
+                    <label class="error" id="errorName"></label>
+                </section>
+                <section>
+                    <label for="family-name">Last name:</label>
+                    <input type="text" id="family-name" placeholder="Въведете второ име"
+                        title="Задължително до 50 знака.">
+                    <label class="error" id="errorFamilyName"></label>
+                </section>
+                <section>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="Въведете email адрес"
+                        title="Изисква се валиден имейл адрес.">
+                    <label class="error" id="errorEmail"></label>
+                </section>
+                <section>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Въведете парола" 
+                        title="Задължително от 6 до 10 знака, включително главни и малки букви и цифри.">
+                    <label class="error" id="errorPassword"></label>
+                </section>
+
+                <p>Optional Address Information:</p>
+
+                <section>
+                    <label for="street">Street:</label>
+                    <input type="text" id="street" placeholder="Въведете улица">
+                </section>
+                <section>
+                    <label for="city">City:</label>
+                    <input type="text" id="city" placeholder="Въведете град">
+                </section>
+                <section>
+                    <label for="postal-code">Postal code:</label>
+                    <input type="text" id="postal-code" placeholder="Пощенски код: 11111-1111">
+                    <label class="error" id="errorPostalCode"></label>
+                </section>
+
+                <input type="submit" id="register-btn" value="REGISTER">
+                <label class="error" id="error"></label>
+                <label class="error" id="ajaxError"></label>
+                <label id="success"></label>
+        </fieldset>
+    </form>
+</body>
+</html>
